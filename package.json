@@ -1,0 +1,40 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:build:* dev:server ",
+    "dev:server": "nodemon --inspect build/bundle.js",
+    "dev:build:server": "webpack --mode development --config webpack.server.js --watch",
+    "dev:build:client": "webpack --mode development --config webpack.client.js --watch"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.4",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.13.1",
+    "css-loader": "^5.2.6",
+    "isomorphic-style-loader": "^5.1.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "style-loader": "^3.0.0",
+    "styled-components": "^5.3.0",
+    "webpack": "^5.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
